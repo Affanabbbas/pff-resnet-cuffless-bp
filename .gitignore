@@ -1,0 +1,71 @@
+# Python caches and local runtime files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments and local secrets
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+
+# Local datasets
+data/
+datasets/raw/
+mimic_bp/
+MIMIC-BP/
+
+# Training artifacts and large generated files
+checkpoints/
+logs/
+*.pt
+*.pth
+*.ckpt
+*.tar.gz
+share_for_chatgpt/
+
+# Generated experiment dumps.
+# Keep metrics and summary outputs in git; regenerate detailed predictions/logs locally.
+outputs/*
+outputs/*_predictions.csv
+outputs/*_subject_predictions.csv
+outputs/*_subject_diffs.csv
+outputs/*_train_log.csv
+outputs/descriptors_only_cache/
+outputs/terminal_runs/
+!outputs/final_results_table.md
+!outputs/final_results_table.csv
+!outputs/*summary.csv
+!outputs/*results.csv
+!outputs/*metrics*.json
+!outputs/*summary*.json
+!outputs/*results*.json
+
+# Figures: keep lightweight PNG/PDF summaries, ignore large print/export formats.
+figures/**/*.tiff
+figures/**/*.tif
+figures/ig_temporal_candidates/
+
+# One-off sharing bundles and local scratch material
+share_for_chatgpt/
+*_backup_*.py
+*backup_before*.py
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+reproducibility/splits.json
+GITHUB_CLEANUP_GUIDE.md
+METHODS_NOTES.md
+outputs/test_metrics.json
+outputs/final_results_table.*
+plot_figure13.py
+figures/figure13_*

@@ -1,0 +1,39 @@
+SBP waveform-channel attribution:
+ECG: 21.55%
+PPG: 27.01%
+dPPG: 23.14%
+ddPPG: 28.30%
+
+SBP physiological-feature attribution:
+ECG mean: 0.12%
+ECG std: 6.30%
+ECG peak-to-peak: 14.85%
+PPG mean: 0.35%
+PPG std: 0.53%
+PPG peak-to-peak: 0.69%
+Mean |dPPG|: 1.63%
+Mean |ddPPG|: 1.46%
+ECG HR: 4.31%
+PPG HR: 49.51%
+Median PTT: 5.05%
+PPG peak count: 15.22%
+
+DBP waveform-channel attribution:
+ECG: 21.83%
+PPG: 26.37%
+dPPG: 22.38%
+ddPPG: 29.41%
+
+DBP physiological-feature attribution:
+ECG mean: 0.40%
+ECG std: 10.32%
+ECG peak-to-peak: 17.08%
+PPG mean: 0.11%
+PPG std: 1.59%
+PPG peak-to-peak: 0.55%
+Mean |dPPG|: 1.10%
+Mean |ddPPG|: 1.20%
+ECG HR: 9.58%
+PPG HR: 7.02%
+Median PTT: 1.91%
+PPG peak count: 49.14%

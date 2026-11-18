@@ -1,0 +1,31 @@
+{
+  "model": "4-model validation-selected ensemble",
+  "weights": {
+    "ResNet_MAE": 0.15,
+    "CNN_Mamba": 0.3,
+    "ResNet_MAE_Pearson_alpha_0.05": 0.11,
+    "ResNet_MAE_Pearson_STD": 0.44
+  },
+  "segment_level": {
+    "SBP_MAE": 12.782410571849327,
+    "SBP_RMSE": 16.1270651045787,
+    "SBP_Pearson": 0.40939767816453254,
+    "DBP_MAE": 8.369702848783433,
+    "DBP_RMSE": 10.86202856051276,
+    "DBP_Pearson": 0.4440539940757557,
+    "AVG_MAE": 10.57605671031638,
+    "AVG_RMSE": 13.49454683254573
+  },
+  "subject_level": {
+    "SBP_MAE": 8.659200784847586,
+    "SBP_RMSE": 11.34653503348861,
+    "SBP_Pearson": 0.47659072760359966,
+    "DBP_MAE": 6.703074959928188,
+    "DBP_RMSE": 8.52865580602096,
+    "DBP_Pearson": 0.4919715887529088,
+    "AVG_MAE": 7.681137872387887,
+    "AVG_RMSE": 9.937595419754786
+  },
+  "n_segments": 6870,
+  "n_subjects": 229
+}

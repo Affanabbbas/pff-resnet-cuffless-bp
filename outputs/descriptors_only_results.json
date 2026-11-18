@@ -1,0 +1,320 @@
+{
+  "seeds": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030
+  ],
+  "descriptor_count": 12,
+  "selection_metric": "validation segment-level AVG_MAE in mmHg",
+  "fit_policy": "selected hyperparameters refit on training split only",
+  "label_standardization": {
+    "source": "training split only",
+    "mean": [
+      112.88774108886719,
+      58.32372283935547
+    ],
+    "std": [
+      17.97554588317871,
+      12.359359741210938
+    ]
+  },
+  "mean_predictor_expected_test_avg_mae": 11.7893,
+  "per_seed": {
+    "2026": {
+      "mean_predictor": {
+        "SBP_MAE": 14.21853756856016,
+        "DBP_MAE": 9.360006907100761,
+        "AVG_MAE": 11.78927223783046
+      },
+      "models": {
+        "gradient_boosting": {
+          "selected_hyperparameters": {
+            "n_estimators": 300,
+            "learning_rate": 0.03,
+            "max_depth": 3,
+            "min_samples_leaf": 5,
+            "loss": "absolute_error"
+          },
+          "validation_metrics": {
+            "SBP_MAE": 13.607341723382136,
+            "DBP_MAE": 9.17505047228307,
+            "AVG_MAE": 11.391196097832603
+          },
+          "test_metrics": {
+            "SBP_MAE": 13.67203843880538,
+            "DBP_MAE": 8.972128668087782,
+            "AVG_MAE": 11.322083553446582
+          }
+        },
+        "mlp": {
+          "selected_hyperparameters": {
+            "hidden_layer_sizes": [
+              32
+            ],
+            "alpha": 0.01,
+            "activation": "relu",
+            "solver": "adam",
+            "max_iter": 500,
+            "early_stopping": false
+          },
+          "validation_metrics": {
+            "SBP_MAE": 13.736678202019785,
+            "DBP_MAE": 9.341002713687905,
+            "AVG_MAE": 11.538840457853844
+          },
+          "test_metrics": {
+            "SBP_MAE": 13.64198290181483,
+            "DBP_MAE": 8.963502743942003,
+            "AVG_MAE": 11.302742822878416
+          }
+        }
+      }
+    },
+    "2027": {
+      "mean_predictor": {
+        "SBP_MAE": 14.21853756856016,
+        "DBP_MAE": 9.360006907100761,
+        "AVG_MAE": 11.78927223783046
+      },
+      "models": {
+        "gradient_boosting": {
+          "selected_hyperparameters": {
+            "n_estimators": 300,
+            "learning_rate": 0.03,
+            "max_depth": 3,
+            "min_samples_leaf": 5,
+            "loss": "absolute_error"
+          },
+          "validation_metrics": {
+            "SBP_MAE": 13.612778705868546,
+            "DBP_MAE": 9.165840027005752,
+            "AVG_MAE": 11.38930936643715
+          },
+          "test_metrics": {
+            "SBP_MAE": 13.679530272824575,
+            "DBP_MAE": 8.966318938570344,
+            "AVG_MAE": 11.322924605697459
+          }
+        },
+        "mlp": {
+          "selected_hyperparameters": {
+            "hidden_layer_sizes": [
+              32
+            ],
+            "alpha": 0.01,
+            "activation": "relu",
+            "solver": "adam",
+            "max_iter": 500,
+            "early_stopping": false
+          },
+          "validation_metrics": {
+            "SBP_MAE": 13.736436260271072,
+            "DBP_MAE": 9.386738512423767,
+            "AVG_MAE": 11.56158738634742
+          },
+          "test_metrics": {
+            "SBP_MAE": 13.75934746105295,
+            "DBP_MAE": 8.928475485613776,
+            "AVG_MAE": 11.343911473333364
+          }
+        }
+      }
+    },
+    "2028": {
+      "mean_predictor": {
+        "SBP_MAE": 14.21853756856016,
+        "DBP_MAE": 9.360006907100761,
+        "AVG_MAE": 11.78927223783046
+      },
+      "models": {
+        "gradient_boosting": {
+          "selected_hyperparameters": {
+            "n_estimators": 300,
+            "learning_rate": 0.03,
+            "max_depth": 3,
+            "min_samples_leaf": 5,
+            "loss": "absolute_error"
+          },
+          "validation_metrics": {
+            "SBP_MAE": 13.617130743792499,
+            "DBP_MAE": 9.166926484060118,
+            "AVG_MAE": 11.392028613926309
+          },
+          "test_metrics": {
+            "SBP_MAE": 13.658064473351606,
+            "DBP_MAE": 8.965293585162742,
+            "AVG_MAE": 11.311679029257174
+          }
+        },
+        "mlp": {
+          "selected_hyperparameters": {
+            "hidden_layer_sizes": [
+              32
+            ],
+            "alpha": 0.0001,
+            "activation": "relu",
+            "solver": "adam",
+            "max_iter": 500,
+            "early_stopping": false
+          },
+          "validation_metrics": {
+            "SBP_MAE": 13.722015105670208,
+            "DBP_MAE": 9.331647330990824,
+            "AVG_MAE": 11.526831218330516
+          },
+          "test_metrics": {
+            "SBP_MAE": 13.608153953768587,
+            "DBP_MAE": 8.910762276310718,
+            "AVG_MAE": 11.259458115039653
+          }
+        }
+      }
+    },
+    "2029": {
+      "mean_predictor": {
+        "SBP_MAE": 14.21853756856016,
+        "DBP_MAE": 9.360006907100761,
+        "AVG_MAE": 11.78927223783046
+      },
+      "models": {
+        "gradient_boosting": {
+          "selected_hyperparameters": {
+            "n_estimators": 300,
+            "learning_rate": 0.03,
+            "max_depth": 3,
+            "min_samples_leaf": 5,
+            "loss": "absolute_error"
+          },
+          "validation_metrics": {
+            "SBP_MAE": 13.613709277762911,
+            "DBP_MAE": 9.167050581336394,
+            "AVG_MAE": 11.390379929549653
+          },
+          "test_metrics": {
+            "SBP_MAE": 13.679063712107359,
+            "DBP_MAE": 8.976775680549801,
+            "AVG_MAE": 11.32791969632858
+          }
+        },
+        "mlp": {
+          "selected_hyperparameters": {
+            "hidden_layer_sizes": [
+              32
+            ],
+            "alpha": 0.0001,
+            "activation": "relu",
+            "solver": "adam",
+            "max_iter": 500,
+            "early_stopping": false
+          },
+          "validation_metrics": {
+            "SBP_MAE": 13.97735482230347,
+            "DBP_MAE": 9.288368288004525,
+            "AVG_MAE": 11.632861555153998
+          },
+          "test_metrics": {
+            "SBP_MAE": 13.774468246147915,
+            "DBP_MAE": 8.869946690604424,
+            "AVG_MAE": 11.32220746837617
+          }
+        }
+      }
+    },
+    "2030": {
+      "mean_predictor": {
+        "SBP_MAE": 14.21853756856016,
+        "DBP_MAE": 9.360006907100761,
+        "AVG_MAE": 11.78927223783046
+      },
+      "models": {
+        "gradient_boosting": {
+          "selected_hyperparameters": {
+            "n_estimators": 300,
+            "learning_rate": 0.03,
+            "max_depth": 3,
+            "min_samples_leaf": 5,
+            "loss": "absolute_error"
+          },
+          "validation_metrics": {
+            "SBP_MAE": 13.60825468761913,
+            "DBP_MAE": 9.174657753699371,
+            "AVG_MAE": 11.39145622065925
+          },
+          "test_metrics": {
+            "SBP_MAE": 13.666876845645954,
+            "DBP_MAE": 8.975442440008015,
+            "AVG_MAE": 11.321159642826984
+          }
+        },
+        "mlp": {
+          "selected_hyperparameters": {
+            "hidden_layer_sizes": [
+              32
+            ],
+            "alpha": 0.01,
+            "activation": "relu",
+            "solver": "adam",
+            "max_iter": 500,
+            "early_stopping": false
+          },
+          "validation_metrics": {
+            "SBP_MAE": 13.664418219766285,
+            "DBP_MAE": 9.219289446126387,
+            "AVG_MAE": 11.441853832946336
+          },
+          "test_metrics": {
+            "SBP_MAE": 13.581434568811423,
+            "DBP_MAE": 8.946990470192832,
+            "AVG_MAE": 11.264212519502127
+          }
+        }
+      }
+    }
+  },
+  "summary": {
+    "mean_predictor": {
+      "SBP_MAE": {
+        "mean": 14.21853756856016,
+        "sd": 0.0
+      },
+      "DBP_MAE": {
+        "mean": 9.360006907100761,
+        "sd": 0.0
+      },
+      "AVG_MAE": {
+        "mean": 11.78927223783046,
+        "sd": 0.0
+      }
+    },
+    "gradient_boosting": {
+      "SBP_MAE": {
+        "mean": 13.671114748546975,
+        "sd": 0.008987905455638762
+      },
+      "DBP_MAE": {
+        "mean": 8.971191862475738,
+        "sd": 0.00521198381246647
+      },
+      "AVG_MAE": {
+        "mean": 11.321153305511356,
+        "sd": 0.0059065400397317475
+      }
+    },
+    "mlp": {
+      "SBP_MAE": {
+        "mean": 13.67307742631914,
+        "sd": 0.08846320889623453
+      },
+      "DBP_MAE": {
+        "mean": 8.923935533332749,
+        "sd": 0.03607643023999801
+      },
+      "AVG_MAE": {
+        "mean": 11.298506479825946,
+        "sd": 0.036544997616978374
+      }
+    }
+  }
+}

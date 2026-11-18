@@ -1,0 +1,73 @@
+data_dir: ../../datasets/mimic_bp
+split_dir: null
+
+signals:
+  # Input channel construction.
+  # false -> [ECG, PPG]
+  # true  -> [ECG, PPG, dPPG, ddPPG]
+  use_derivatives: true
+
+  # MIMIC-BP files are expected as 30 windows per subject, 30s/window at 125 Hz.
+  segment_seconds: 30
+  sampling_rate: 125
+  expected_segments_per_subject: 30
+
+  # Input normalization options: none, global_train, per_segment_zscore.
+  # per_segment_zscore is usually stronger after filtering/derivatives because
+  # it reduces subject/device amplitude bias.
+  normalization: per_segment_zscore
+
+  # Waveform cleanup before normalization:
+  # - replace NaN/inf
+  # - winsorize rare spikes
+  # - bandpass ECG/PPG
+  preprocess: true
+  filter_signals: true
+
+  # Conservative quality filtering:
+  # - label plausibility
+  # - flatline checks
+  # - extreme-spike checks
+  # - minimum plausible PPG peak count
+  quality_filter: true
+  min_ppg_peak_count: 10
+
+  # Kept false for the current ResNet baseline. Turn this on later for a
+  # fusion model that consumes meta["physio_features"].
+  include_physio_features: false
+
+  max_cache_subjects: 16
+
+training:
+  model: cnn_mamba_attention
+  batch_size: 64
+  epochs: 50
+  lr: 0.0001
+  weight_decay: 0.0001
+  loss: huber              # options: huber, mse, mae
+
+  # Train loss is computed on standardized SBP/DBP, while validation metrics
+  # are converted back to real mmHg in train.py.
+  label_standardization: true
+
+  # Save the checkpoint that is best on the actual target metric instead of
+  # raw validation loss.
+  best_metric: AVG_MAE
+
+  # Keep LR scheduling on validation loss because it is smoother than MAE.
+  scheduler_metric: loss
+
+  early_stopping_patience: 8
+  num_workers: 4
+  seed: 42
+  device: cuda
+  save_dir: checkpoints
+  log_csv: outputs/train_log.csv
+
+model:
+  base_channels: 64
+  d_model: 128
+  mamba_layers: 3
+  mamba_expansion: 2
+  attention_heads: 4
+  dropout: 0.15

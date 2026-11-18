@@ -1,0 +1,26 @@
+{
+  "diff_sbp": {
+    "mean_improvement_resnet_minus_physfusion": 0.13392705859055154,
+    "ci_95_low": -0.036210404564026084,
+    "ci_95_high": 0.3040542604149341,
+    "p_two_sided_approx": 0.1268,
+    "n_subjects": 229,
+    "n_bootstrap": 5000
+  },
+  "diff_dbp": {
+    "mean_improvement_resnet_minus_physfusion": 0.04984380808112573,
+    "ci_95_low": -0.09056426214304213,
+    "ci_95_high": 0.18867511992475325,
+    "p_two_sided_approx": 0.4896,
+    "n_subjects": 229,
+    "n_bootstrap": 5000
+  },
+  "diff_avg": {
+    "mean_improvement_resnet_minus_physfusion": 0.09188543333583862,
+    "ci_95_low": -0.03748861223190291,
+    "ci_95_high": 0.21924393296554048,
+    "p_two_sided_approx": 0.1632,
+    "n_subjects": 229,
+    "n_bootstrap": 5000
+  }
+}

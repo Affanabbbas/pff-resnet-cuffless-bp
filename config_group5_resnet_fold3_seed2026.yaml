@@ -1,0 +1,37 @@
+data_dir: ../../datasets/mimic_bp_group5/fold_3
+split_dir: null
+signals:
+  use_derivatives: true
+  segment_seconds: 30
+  sampling_rate: 125
+  expected_segments_per_subject: 30
+  normalization: per_segment_zscore
+  preprocess: true
+  filter_signals: true
+  quality_filter: true
+  min_ppg_peak_count: 10
+  include_physio_features: false
+  max_cache_subjects: 16
+training:
+  model: resnet1d
+  batch_size: 64
+  epochs: 50
+  lr: 0.0001
+  weight_decay: 0.0001
+  loss: mae
+  label_standardization: true
+  best_metric: AVG_MAE
+  scheduler_metric: loss
+  early_stopping_patience: 8
+  num_workers: 4
+  seed: 2026
+  device: cuda
+  save_dir: checkpoints/group5_resnet_fold3_seed2026
+  log_csv: outputs/group5_resnet_fold3_seed2026_train_log.csv
+model:
+  base_channels: 64
+  d_model: 128
+  mamba_layers: 3
+  mamba_expansion: 2
+  attention_heads: 4
+  dropout: 0.15
